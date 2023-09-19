@@ -9,11 +9,11 @@
 <body>
     <header>
         <div>
-            <span>Tickethack</span>
+            <a href="./index.html" id="logo">Tickethack</a>
         </div>
         <div>
-            <a href="#">Cart</a>
-            <a href="#">Bookings</a>
+            <a href="./src/cart.html">Cart</a>
+            <a href="./src/bookings.html">Bookings</a>
         </div>
     </header>
     <main>
@@ -25,14 +25,17 @@
         <div id="container-input-result">
             <div id="bloc-input" class="bloc-input-result">
                 <form action="#">
-                    <input type="text" placeholder="Departure">
-                    <input type="text" placeholder="Arrival">
-                    <input type="date">
+                    <div>
+                        <input type="text" placeholder="Departure">
+                        <div id="line-input"></div>
+                        <input type="text" placeholder="Arrival">
+                        <input type="date" value="2022-06-23" class="input-date">
+                    </div>
                     <button value="Search">Search</button>
                 </form>
             </div>
             <div id="bloc-result" class="bloc-input-result">
-                <img src="./images/train.png">
+                <img src="./src/images/train.png">
                 <div id="line"></div>
                 <p>It's time to book your future trip.</p>
             </div>

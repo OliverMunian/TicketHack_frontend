@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("./images/background.jpg");
+    background-image: url("./src/images/background.jpg");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -22,10 +22,9 @@ header {
     padding: 20px;
 }
 
-header span {
+#logo {
     color: #4FAB91;
     font-size: 22px;
-    font-weight: bold;
 }
 
 header a {
@@ -45,34 +44,89 @@ main {
 #title-description {
     text-align: center;
     color: #fff;
+    margin: 2% 0;
+}
+
+#title-description p {
+    margin-top: 20px;
 }
 
 #container-input-result {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 60%;
+    height: 50vh;
 }
 
 .bloc-input-result {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
+    width: 30%;
 }
 
 #bloc-input form {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#bloc-input form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-date {
+    margin-top: 30px;
 }
 
 #bloc-result {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
+#bloc-result img {
+    width: 120px;
+    margin-bottom: 14%;
+}
+
+#bloc-result p {
+    margin-top: 16%;
+}
 
 #line {
     width: 90%;
     height: 2px;
     background-color: #4FAB91;
+}
+
+input {
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+
+#line-input {
+    width: 98%;
+    height: 2px;
+    background-color: #afafaf;
+    margin: 0 auto;
+}
+
+button {
+    background: #4FAB91;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: #ffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #499b84;
 }
