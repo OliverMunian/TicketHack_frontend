@@ -62,7 +62,7 @@ main {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    width: 34%;
 }
 
 #bloc-input form {
@@ -93,7 +93,7 @@ main {
     margin-bottom: 14%;
 }
 
-#bloc-result p {
+#description {
     margin-top: 16%;
 }
 
@@ -101,6 +101,7 @@ main {
     width: 90%;
     height: 2px;
     background-color: #4FAB91;
+    margin: 0 auto;
 }
 
 input {
@@ -125,8 +126,45 @@ button {
     border-radius: 4px;
     color: #ffff;
     cursor: pointer;
+    text-decoration: none;
 }
 
 button:hover {
     background-color: #499b84;
+}
+
+.button-book {
+    background: #4FAB91;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: #ffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-book:hover {
+    background-color: #499b84;
+}
+
+.result {
+    text-align: center;
+}
+
+#result-trips {
+    width: 100%;
+    overflow: auto;
+}
+
+.container-element-trips {
+    background: #F6EEEF;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.trip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }

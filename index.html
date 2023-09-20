@@ -35,9 +35,21 @@
                 </form>
             </div>
             <div id="bloc-result" class="bloc-input-result">
-                <img src="./src/images/train.png">
-                <div id="line"></div>
-                <p>It's time to book your future trip.</p>
+                <div class="result">
+                    <img src="./src/images/train.png">
+                    <div id="line"></div>
+                    <p id="description">It's time to book your future trip.</p>
+                </div>
+                <div class="result" id="result-trips" style="display: none;">
+                    <div class="container-element-trips">
+                        <div class="trip">
+                            <p>Paris > Lyon</p>
+                            <p>20:09</p>
+                            <p>103€</p>
+                            <a class="button-book" href="./src/cart.html">Book</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
