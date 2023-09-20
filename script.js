@@ -23,38 +23,40 @@ form.addEventListener('submit',function(e){
         fetch(`http://localhost:3000/trips/${departure}/${arrival}/${date}`).then(response => response.json())
         .then(data =>{
             e.preventDefault()
-            console.log(data.data)
             let allTrip = data.data
             let contentImage = document.querySelector('#trip-img').style = "display : none"
             if(data)
                 for(let i = 0; i < allTrip.length; i++){
-
                     const time = allTrip[i].date
                     const date = new Date(time).toLocaleTimeString('en',
                     { timeStyle: 'short', hour12: false, timeZone: 'UTC' });
                     let blocResult = document.querySelector("#result-trips")
 
-                    blocResult.innerHTML += `<div id="container-element-trips">
+                    blocResult.innerHTML += `<div class="container-element-trips">
                     <div class="trip">
                         <p>${allTrip[i].departure} > ${allTrip[i].arrival}</p> <p>${date}</p>
-                        <p>${allTrip[i].price}€</p>
-                        <a class="button-book" href="./src/cart.html">Book</a>
+                        <p >${allTrip[i].price}€</p>
+                        <a class="button-book" >Book </a>
                     </div>
                     </div>`
                 }
+
             else{
                 result.innerHTML = 'Désolé la recherche n\'a pas aboutie !'
             }
+            //ajouter un voyage
+            let bookButton = document.querySelector(".button-book")
+            bookButton.addEventListener('click', function(e){
+                console.log('coucou')
+                console.log(e)
+                let AllMyTrips = []
+
+                localStorage.setItem('Voyage choisi', AllMyTrips)
+            })
         })     
     }
+
     return false
 })
 
-
-let bookButton = document.querySelector("#button-book")
-
-
-bookButton.addEventListener('click', function(){
-    localStorage.setItem('Voyage choisi', JSON.stringify(data))
-})
 
