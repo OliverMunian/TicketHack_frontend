@@ -24,34 +24,37 @@
 
         <div id="container-input-result">
             <div id="bloc-input" class="bloc-input-result">
-                <form action="#">
+
+                <form id="inscription"><!--- FORMULAIRE -->
                     <div>
-                        <input type="text" placeholder="Departure">
-                        <div id="line-input"></div>
-                        <input type="text" placeholder="Arrival">
-                        <input type="date" value="2022-06-23" class="input-date">
+                        <input type="text" placeholder="Departure" id="departure">
+                        <input type="text" placeholder="Arrival" id="arrival">
+                        <input type="date" class="input-date" id="date">
                     </div>
-                    <button value="Search">Search</button>
-                </form>
+                    <input type="submit" value="Search" id="myButton">
+                </form><!--- FORMULAIRE -->
+
+
             </div>
-            <div id="bloc-result" class="bloc-input-result">
-                <div class="result">
+            <div id="bloc-result" class="bloc-input-result"><!--- Bloc result -->
+                <div class="result" id="trip-img">
                     <img src="./src/images/train.png">
                     <div id="line"></div>
-                    <p id="description">It's time to book your future trip.</p>
+                    <p id="text-result">It's time to book your future trip.</p>
                 </div>
-                <div class="result" id="result-trips" style="display: none;">
-                    <div class="container-element-trips">
-                        <div class="trip">
+                <div class="result" id="result-trips">
+                    <div id="container-element-trips">
+                        <!-- <div class="trip">
                             <p>Paris > Lyon</p>
                             <p>20:09</p>
                             <p>103€</p>
-                            <a class="button-book" href="./src/cart.html">Book</a>
-                        </div>
+                            <a id="button-book" href="./src/cart.html">Book</a>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
